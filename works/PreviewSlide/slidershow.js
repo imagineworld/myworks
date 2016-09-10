@@ -65,8 +65,10 @@
 		function movePictures(){
 			var pictures = g('.picture');
 			for(i=0;i<pictures.length;i++){
-				pictures[i].style.marginTop = (-1 * pictures[i].clientHeight/2) + 'px';
-				console.log(pictures[i].style.marginTop);
+				if (pictures[i].clientHeight!=0) {
+						pictures[i].style.marginTop = (-1 * pictures[i].clientHeight/2) + 'px';
+						console.log(pictures[i].style.marginTop);
+					}
 			}
 		}
 		window.onload = function(){
