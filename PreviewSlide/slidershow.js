@@ -78,7 +78,7 @@
 		}
 		window.onload = function(){
 			addSliders();
-			switchSlider(2);
+			switchSlider(1);
 				
 			
 		}
