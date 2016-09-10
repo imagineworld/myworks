@@ -44,8 +44,7 @@
 			g('template_main').innerHTML += tpl_main.replace(/{{index}}/g,'{{index}}').replace(/{{h2}}/g,data[i].h2).replace(/{{h3}}/g,data[i].h3);
 			g('main_{{index}}').id = 'main_background';
 
-			setTimeout(function(){
-				movePictures(); },100);//获得图片高度需要资源加载完全
+			
 		}
 
 		 //4幻灯片切换
@@ -61,6 +60,8 @@
 			main.className += ' main-i_active';
 			ctrl.className += ' ctrl-i_active';
 			
+			setTimeout(function(){
+				movePictures(); },100);//获得图片高度需要资源加载完全
 			//6.2 切换完成后复制当前背景图
 			setTimeout(function(){g('main_background').innerHTML = main.innerHTML},1000);
 
